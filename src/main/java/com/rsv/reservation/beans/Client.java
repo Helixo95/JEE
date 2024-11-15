@@ -13,14 +13,6 @@ public class Client implements Serializable {
     // Constructeur par défaut
     public Client() {}
 
-    // Constructeur avec paramètres
-    public Client(String nom, String prenom, String telephone, String email) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.telephone = telephone;
-        this.email = email;
-    }
-
     // Getters et setters
     public String getNom() {
         return nom;

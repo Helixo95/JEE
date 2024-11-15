@@ -37,8 +37,15 @@ public class CreerClient extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("inscription.jsp");
             dispatcher.forward(request, response);
         } else {
-            // Créer un objet Client
-            Client client = new Client(nom, prenom, telephone, email);
+            // Crée un nouvel objet Client
+            Client client = new Client();
+
+            // Utilisation des setters pour initialiser les attributs
+            client.setNom(nom);
+            client.setPrenom(prenom);
+            client.setTelephone(telephone);
+            client.setEmail(email);
+
 
             // Ajouter l'objet dans la requête
             request.setAttribute("client", client);

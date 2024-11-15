@@ -46,9 +46,16 @@ public class CreerReservation extends HttpServlet {
         } else {
             // Convertir le prix
             double prix = Double.parseDouble(prixStr);
+            // Crée un nouvel objet Reservation
+            Reservation reservation = new Reservation();
 
-            // Créer un objet Reservation
-            Reservation reservation = new Reservation(nom, prenom, telephone, email, typeAppartement, prix, options);
+            // Utilisation des setters pour initialiser les attributs
+            reservation.setNom(nom);
+            reservation.setPrenom(prenom);
+            reservation.setTelephone(telephone);
+            reservation.setEmail(email);
+            reservation.setTypeAppartement(typeAppartement);
+            reservation.setPrix(prix);
 
             // Ajouter l'objet dans la requête
             request.setAttribute("reservation", reservation);
