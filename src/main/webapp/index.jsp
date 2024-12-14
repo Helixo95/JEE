@@ -5,9 +5,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "CY-CHAT v6.5" %>
+<h1><%= "Chat v11.1.3"%>
 </h1>
 <br/>
-<a href="login.jsp">Get into Chat</a>
+<a href="login.jsp">go to chat</a>
 </body>
 </html>
